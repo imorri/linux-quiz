@@ -1,8 +1,5 @@
-@media (max-width: 414px) {
-    .controls-area {
-        width: 100%;
-    }
-    @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+
 
 body{
 	font-size: 20px;
@@ -10,7 +7,7 @@ body{
 	color: #333;
   font-weight: 300;
   text-align: center;
-  background-color: #f8f6f0;
+  background-color: #91afa6;
 }
 h1{
   font-weight: 300;
