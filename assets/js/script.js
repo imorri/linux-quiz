@@ -138,7 +138,7 @@
       rightAnswer: "a"
     },
     {
-      question: "Who Developed the Linux Kernal",
+      question: "Who Developed the Linux Kernel",
       answers: {
         a: "Steve Jobs",
         b: "Linus Torvalds",
@@ -176,9 +176,9 @@
         question: "Which are the four distos that most others distos are dirived from?",
         answers: {
           a: "Ubuntu, Arch, Manjaro, Redhat",
-          b: "Manjaro, Debian, Ubuntu, MX Linux",
+          b: "Fedora, Debian, Ubuntu, MX Linux",
           c: "PopOS, Mint, Manjaro, Redhat",
-          d: "Ubuntu, Arch, Debian, Redhat",
+          d: "Ubuntu, Arch, Debian, Fedora",
         },
         rightAnswer: "d"
       }

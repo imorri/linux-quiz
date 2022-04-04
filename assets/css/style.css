@@ -67,7 +67,8 @@ button:hover{
 }
 .quiz-container{
   position: relative;
-  width: 60%;
+  width: 70%;
+  height: 65vh;
   max-height: 400px;
   max-width: 830px;
   margin-top: 70px;
