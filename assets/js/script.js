@@ -106,31 +106,79 @@
     const submitButton = document.getElementById('submit');
     const quizQuestions = [
     // the questions
-      {
-        question: "Who invented JavaScript?",
-        answers: {
-          a: "Douglas Crockford",
-          b: "Sheryl Sandberg",
-          c: "Brendan Eich"
-        },
-        rightAnswer: "c"
+    {
+      question: "Which of below are established Linux distributions?",
+      answers: {
+       a: "Ubuntu, Fedora, Solus, FreeBSD, Mint, Manjaro",
+       b: "Fedora, Solus, OS2, Mint, Manjaro, MX Linux",        
+       c: "Ubuntu, Fedora, Solus, Mint, PopOS, Manjaro",
+       d: "Mint, Manjaro, MX Linux, Ubuntu, Windows 11, Zorin",
+},
+      rightAnswer: "c"
+    },
+
+    {
+      question: "FSF stand for ?",
+      answers: {
+       a: "First Serve First",
+       b: "Free Software File",        
+       c: "Free Software Foundation",
+       d: "None of the above",
+},
+      rightAnswer: "c"
+    },
+    {
+      question: "Which are package managers?",
+      answers: {
+       a: "RPM, dpkg, Pacman, APT, YUM",
+       b: "eopkg, pkgs, APT, RPM, YUM ",
+       c: "RPM, dpkg,Pacman, DTS, eopkg ",    
+       d: "dpkg, BSD, DNF, APT, YUM ",
+},
+      rightAnswer: "a"
+    },
+    {
+      question: "Who Developed the Linux Kernal",
+      answers: {
+        a: "Steve Jobs",
+        b: "Linus Torvalds",
+        c: "Bill Gates",
+        d: "David Packard",
       },
-      {
-        question: "Which one of these is a JavaScript package manager?",
-        answers: {
-          a: "Node.js",
-          b: "TypeScript",
-          c: "npm"
-        },
-        rightAnswer: "c"
+      rightAnswer: "b"
+
+    },
+
+    {
+      question: "Linux is a _____ and _____ operating system",
+      answers: {
+        a: "Single User and Multitasking",
+        b: "Multiuser and Multitasking",
+        c: "Multiuser and Single Tasking",
+        d: "None of the above",
       },
+      rightAnswer: "b"
+
+    },
+
+    {
+      question: "Core of the linux operating system is ........",
+      answers: {
+        a: "Bash Shell",
+        b: "Command Line",
+        c: "The Kernal",
+        d: "The Terminal",
+      },
+      rightAnswer: "c"
+
+    },
       {
-        question: "Which tool can you use to ensure code quality?",
+        question: "Which are the four distos that most others distos are dirived from?",
         answers: {
-          a: "Angular",
-          b: "jQuery",
-          c: "RequireJS",
-          d: "ESLint"
+          a: "Ubuntu, Arch, Manjaro, Redhat",
+          b: "Manjaro, Debian, Ubuntu, MX Linux",
+          c: "PopOS, Mint, Manjaro, Redhat",
+          d: "Ubuntu, Arch, Debian, Redhat",
         },
         rightAnswer: "d"
       }
