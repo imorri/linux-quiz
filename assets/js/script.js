@@ -173,7 +173,7 @@
 
     },
       {
-        question: "Which are the four distos that most others distos are dirived from?",
+        question: "Which are the four distros that most others distros are dirived from?",
         answers: {
           a: "Ubuntu, Arch, Manjaro, Redhat",
           b: "Fedora, Debian, Ubuntu, MX Linux",
