@@ -1,19 +1,20 @@
 (function(){
-    function startQuiz(){
-      // variable for HTML
+    // Functions
+    function buildQuiz(){
+      // variable to store the HTML output
       const output = [];
   
       // for each question...
-      quizQuestions.forEach(
+      myQuestions.forEach(
         (currentQuestion, questionNumber) => {
   
           // variable to store the list of possible answers
           const answers = [];
   
-          // available answer...
+          // and for each available answer...
           for(letter in currentQuestion.answers){
   
-            // radio button
+            // ...add an HTML radio button
             answers.push(
               `<label>
                 <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -37,41 +38,42 @@
       quizContainer.innerHTML = output.join('');
     }
   
-    function theResults(){
+    function showResults(){
   
-      // answers from the quiz
+      // gather answer containers from our quiz
       const answerContainers = quizContainer.querySelectorAll('.answers');
   
-      // user's answers
-      let numberRight = 0;
+      // keep track of user's answers
+      let numCorrect = 0;
   
-      // each question
-      quizQuestions.forEach( (currentQuestion, questionNumber) => {
+      // for each question...
+      myQuestions.forEach( (currentQuestion, questionNumber) => {
   
-        // selected answer
+        // find selected answer
         const answerContainer = answerContainers[questionNumber];
         const selector = `input[name=question${questionNumber}]:checked`;
         const userAnswer = (answerContainer.querySelector(selector) || {}).value;
   
-        // if answer is right
-        if(userAnswer === currentQuestion.rightAnswer){
+        // if answer is correct
+        if(userAnswer === currentQuestion.correctAnswer){
           // add to the number of correct answers
-          numberRight++;
+          numCorrect++;
   
           // color the answers green
-          answerContainers[questionNumber].style.color = 'green';
+          answerContainers[questionNumber].style.color = 'lightgreen';
         }
+        // if answer is wrong or blank
         else{
           // color the answers red
           answerContainers[questionNumber].style.color = 'red';
         }
       });
   
-      // number of correct answers
-      resultsContainer.innerHTML = `${numberRight} out of ${quizQuestions.length}`;
+      // show number of correct answers out of total
+      resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
     }
   
-    function quizSlide(n) {
+    function showSlide(n) {
       slides[currentSlide].classList.remove('active-slide');
       slides[n].classList.add('active-slide');
       currentSlide = n;
@@ -90,22 +92,20 @@
         submitButton.style.display = 'none';
       }
     }
-   // advances the slide to next question
-    function nextSlide() {
-      quizSlide(currentSlide + 1);
+  
+    function showNextSlide() {
+      showSlide(currentSlide + 1);
     }
   
-  // returns slide to prefious question
-    function previousSlide() {
-      quizSlide(currentSlide - 1);
+    function showPreviousSlide() {
+      showSlide(currentSlide - 1);
     }
   
     // Variables
     const quizContainer = document.getElementById('quiz');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
-    const quizQuestions = [
-    // the questions
+    const myQuestions = [
       {
         question: "Who invented JavaScript?",
         answers: {
@@ -113,7 +113,7 @@
           b: "Sheryl Sandberg",
           c: "Brendan Eich"
         },
-        rightAnswer: "c"
+        correctAnswer: "c"
       },
       {
         question: "Which one of these is a JavaScript package manager?",
@@ -122,7 +122,7 @@
           b: "TypeScript",
           c: "npm"
         },
-        rightAnswer: "c"
+        correctAnswer: "c"
       },
       {
         question: "Which tool can you use to ensure code quality?",
@@ -132,12 +132,12 @@
           c: "RequireJS",
           d: "ESLint"
         },
-        rightAnswer: "d"
+        correctAnswer: "d"
       }
     ];
   
     // Kick things off
-    startQuiz();
+    buildQuiz();
   
     // Pagination
     const previousButton = document.getElementById("previous");
@@ -146,11 +146,11 @@
     let currentSlide = 0;
   
     // Show the first slide
-    quizSlide(currentSlide);
+    showSlide(currentSlide);
   
     // Event listeners
-    submitButton.addEventListener('click', theResults);
-    previousButton.addEventListener("click", previousSlide);
-    nextButton.addEventListener("click", nextSlide);
+    submitButton.addEventListener('click', showResults);
+    previousButton.addEventListener("click", showPreviousSlide);
+    nextButton.addEventListener("click", showNextSlide);
   })();
   
