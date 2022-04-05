@@ -90,8 +90,9 @@ I used the several rescources to help me understnd the with the code I required,
 
 - Slack community
 - code institute tutorials
-- w3shools webside https://www.w3schools.com/ helped me understand and implement flex code.
--https://www.sitepoint.com/simple-javascript-quiz/
+- w3shools CSS https://www.w3schools.com/ helped me understand some of the CSS code>
+- w3shools JS https://www.w3schools.com/js/default.asp helped me understand functions and containers.
+
 
 ### Content 
 - All content was prodided by myself.
